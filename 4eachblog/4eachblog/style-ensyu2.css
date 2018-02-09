@@ -1,0 +1,105 @@
+header{
+    position:absolute;
+    top:0px;
+    left:0px;
+    width:100%
+    height:60px;
+    background-color:white
+}
+
+header img{
+    float:left;
+    width:35%;
+    height:35%;
+    margin-top:10px;
+    padding-left:10px;
+    
+}
+
+header menu{
+    position:absolute;
+    top:50px;
+    left:0px;
+    width:1000px;
+    height:30px;
+    background-color:black;
+    
+}
+
+header menu ul{
+    float:left;  
+}
+
+header menu ul li{
+     float:left;
+     list-style:none;
+     padding-right:30px;
+    color:white;
+    font-size:9px;
+    line-height:3px;
+}
+
+main{
+    clear:both;
+}
+
+.maincontainer{
+    width:98%;
+    margin:0 auto;
+    margin-top:110px;
+   
+}
+
+.left{
+    float:left;
+    width:70%;
+    height:400px;
+    margin-bottom:40px;
+
+   
+}
+
+main h2{border-left:3px solid black;
+    border-bottom:1px double black;    
+}
+
+main p{
+    clear:left;
+    font-size:10px;
+}
+
+
+.graybox{
+    margin-top:30px;
+    width:100%;
+    height:260px;
+    background-color:lightgray; 
+}
+.gazo{
+      float:left;
+     padding-left:10px;
+    padding-top:10px;
+    text-align:center;
+}
+
+    
+}
+
+.right{
+    float:right;
+    width:28%;
+    height:400px;
+ 
+}
+
+main h3{
+    border-bottom:1px dotted black;
+     
+}
+
+main ul li{
+    clear:right;
+    font-size:10px;
+    list-style:none;
+    
+}
