@@ -1,0 +1,2 @@
+
+public class SmartPhone implements Mp3Player,NewFunction {}
