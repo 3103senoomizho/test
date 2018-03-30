@@ -1,0 +1,18 @@
+package com.internousdev.ecsite.action;
+
+import java.util.Map;
+import org.apache.struts2.interceptor.SessionAware;
+
+import com.internousdev.ecsite.dao.MasterDAO;
+import com.internousdev.ecsite.dto.MasterDTO;
+import com.opensymphony.xwork2.ActionSupport;
+
+public class MasterAction extends ActionSupport implements SessionAware {
+	private String masterId;
+	private String masterPassword;
+	public Map<String,Object>session;
+	private MasterDAO masterDAO=new MasterDAO();
+	private MasterDTO masterDTO=new MasterDTO();
+
+
+}

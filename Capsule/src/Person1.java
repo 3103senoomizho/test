@@ -1,0 +1,14 @@
+
+public class Person1 {
+	private String name=null;
+	private int age=0;
+
+	public String getName(){
+		return this.name;
+	}
+	public void setName(String name){
+		this.name=name;
+	}
+
+
+}

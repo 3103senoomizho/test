@@ -1,0 +1,42 @@
+package com.internousdev.ecsite.dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
+import com.internousdev.ecsite.dto.MasterDTO;
+import com.internousdev.ecsite.util.DBConnector;
+
+public class MasterDAO {
+	private DBConnector dbConnector=new DBConnector();
+	private Connection connection = dbConnector.getConnection();
+	private MasterDTO masterDTO=new MasterDTO();
+
+	public MasterDTO getMasterInfo(String masterId,String masterPassword){
+		String sql="SELECT * FROM master_info WHERE master_id=? AND master_pass=?";
+		try{
+			PreparedStatement preparedStatement=connection.prepareStatement(sql);
+
+			preparedStatement.setString(1, masterId);
+			preparedStatement.setString(2, masterPassword);
+
+			ResultSet resultSet = preparedStatement.executeQuery();
+			if(resultSet.next()){
+				masterDTO.setMasterId(resultSet.getString("master_id"));
+				masterDTO.setMasterPassword(resultSet.getString("master_pass"));
+				masterDTO.setMasterName(resultSet.getString("master_name"));
+
+				if(!(resultSet.getString("login_id").equals(null))){
+					masterDTO.setMasterFlg(true);
+				}
+			}
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+		return masterDTO;
+	}
+	public MasterDTO getMasterDTO(){
+		return masterDTO;
+	}
+
+}

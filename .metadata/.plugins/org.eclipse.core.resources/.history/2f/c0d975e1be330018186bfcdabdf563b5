@@ -1,0 +1,21 @@
+package com.internousdev.ecsite.action;
+
+import java.sql.SQLException;
+import java.util.Map;
+
+import com.internousdev.ecsite.dao.ItemUpdateCompleteDAO.
+import com.internousdev.ecsite.util.DateUtil;
+import com.opensymphony.xwork2.ActionSupport;
+
+public class ItemUpdateEnterAction extends ActionSupport implements SessionAware {
+	private String item_name;
+	private String item_price;
+	private String item_stock;
+	public Map<String,Object> session;
+	private ItemUpdateCompleteDAO dao=new ItemUpdateCompleteDAO();
+	private DateUtil dateUtil=new DateUtil();
+	public String execute() throws SQLException{
+
+	}
+
+}
