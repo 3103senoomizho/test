@@ -38,7 +38,7 @@ public class ItemUpdateEnterAction extends ActionSupport implements SessionAware
 		this.item_name=item_name;
 	}
 
-	public String getItem_prie(){
+	public String getItem_price(){
 		return item_price;
 	}
 	public void setItem_price(String item_price){
